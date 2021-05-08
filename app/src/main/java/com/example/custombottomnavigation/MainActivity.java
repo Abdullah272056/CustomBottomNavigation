@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         });
         // set notification count
         bottomNavigation.setCount(1,"10");
-        // set home fragment initially selected
+
+        // set home fragment initially selected/ firstly selected
         bottomNavigation.show(2, true);
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
