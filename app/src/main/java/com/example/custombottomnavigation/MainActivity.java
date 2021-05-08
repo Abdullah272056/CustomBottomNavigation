@@ -18,34 +18,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bottomNavigation=findViewById(R.id.bottom_navigation);
-        bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_baseline_notifications_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_baseline_home_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_person_24));
+
+
+        bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_baseline_home_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_baseline_sort_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_tasbeeh));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.ic_baseline_notifications_24));
+
+
+
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
                 Fragment fragment=null;
                 switch (item.getId()){
                     case 1:
-                        fragment=new NotificationFragment();
+                        fragment=new HomeFragment();
 
                         break;
                     case 2:
-                        fragment=new HomeFragment();
+                        fragment=new SortFragment();
                         break;
                     case 3:
-                        fragment=new PersonFragment();
+                        fragment=new TasbeehFragment();
                         break;
-
+                    case 4:
+                        fragment=new NotificationFragment();
+                        break;
                 }
                 loadFragment(fragment);
             }
         });
         // set notification count
-        bottomNavigation.setCount(1,"10");
+        bottomNavigation.setCount(4,"11");
 
         // set home fragment initially selected/ firstly selected
-        bottomNavigation.show(2, true);
+        bottomNavigation.show(1, true);
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override

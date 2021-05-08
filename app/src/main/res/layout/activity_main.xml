@@ -14,15 +14,20 @@
       android:layout_height="0dp"
       android:layout_weight="1"/>
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
+        app:mbn_shadowColor="#03DBF6"
+        app:mbn_rippleColor="#F10253"
+
+        android:background="#111"
         app:mbn_circleColor="#FFFFFF"
-        app:mbn_selectedIconColor="#6BC600"
+        app:mbn_selectedIconColor="#FDC51B"
         app:mbn_countTextColor="#FFFFFF"
-        app:mbn_countBackgroundColor="#ff6f00"
-        app:mbn_defaultIconColor="#FFFFFF"
-        app:mbn_backgroundBottomColor="#3c415e"/>
+        app:mbn_countBackgroundColor="#FF0015"
+        app:mbn_defaultIconColor="#000000"
+        app:mbn_backgroundBottomColor="#FDC51B"/>
 
 
 </LinearLayout>
